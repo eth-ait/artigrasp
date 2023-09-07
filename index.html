@@ -47,20 +47,23 @@
           <h1 class="title is-1 publication-title">ArtiGrasp: Physically Plausible Synthesis of Bi-Manual Dexterous Grasping and Articulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Hui Zhang
+              Hui Zhang<sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://ps.is.tuebingen.mpg.de/person/mkocabas">Muhammed Kocabas</a><sup>1,2</sup>,</span>
+              Sammy Christen<sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://ait.ethz.ch/people/eaksan">Emre Aksan</a><sup>1</sup>,
+              Zicong Fan<sup>1,2</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://www.railab.kaist.ac.kr/members">Jemin Hwangbo</a><sup>3</sup>,
+              Luocheng Zheng<sup>1</sup>,</span>
             </span>
               <span class="author-block">
-              <a href="https://ait.ethz.ch/people/song">Jie Song</a><sup>1</sup>,
+              Jemin Hwangbo<sup>3</sup>,</span>
             </span>
             <span class="author-block">
-              <a href="https://ait.ethz.ch/people/hilliges">Otmar Hilliges</a><sup>1</sup>
+              Jie Song<sup>1</sup>,</span>
+            </span>
+            <span class="author-block">
+              Otmar Hilliges<sup>1</sup>,</span>
             </span>
           </div>
 
@@ -70,16 +73,14 @@
             <span class="author-block"><sup>2</sup>Max Planck Institute for Intelligent Systems, Tübingen, Germany</span>
             <br>
             <span class="author-block"><sup>3</sup>Department of Mechanical Engineering, KAIST, Korea </span>
-            <br>
-            <span class="author-block">  <b>In CVPR '22</b></span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://files.ait.ethz.ch/projects/d-grasp/d-grasp.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
+<!--                 <a href="https://files.ait.ethz.ch/projects/d-grasp/d-grasp.pdf" -->
+<!--                    class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -88,8 +89,8 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=5OqbDq-pgLc"
-                   class="external-link button is-normal is-rounded is-dark">
+<!--                 <a href="https://www.youtube.com/watch?v=5OqbDq-pgLc"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
@@ -118,8 +119,8 @@
 <!--              </span>-->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/christsa/dgrasp"
-                   class="external-link button is-normal is-rounded is-dark">
+<!--                 <a href="https://github.com/christsa/dgrasp"
+                   class="external-link button is-normal is-rounded is-dark"> -->
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -152,7 +153,8 @@
           </video>
         </div>
         <h2 class="subtitle has-text-centered">
-            D-Grasp is a solution to the new dynamic grasp synthesis task: given an object with a known 6D pose and a grasp reference, our goal is to generate motions that move the object to a target 6D pose.
+            ArtiGrasp is a method to synthesize physically plausible bi-manual manipulation. It can generate motion sequences
+such as grasping and relocating an object with one or two hands, and opening it to a target articulation angle. 
         </h2>
       </div>
     </div>
@@ -167,7 +169,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce the dynamic grasp synthesis task: given an object with a known 6D pose and a grasp reference, our goal is to generate motions that move the object to a target 6D pose. This is challenging, because it requires reasoning about the complex articulation of the human hand and the intricate physical interaction with the object. We propose a novel method that frames this problem in the reinforcement learning framework and leverages a physics simulation, both to learn and to evaluate such dynamic interactions. A hierarchical approach decomposes the task into low-level grasping and high-level motion synthesis. It can be used to generate novel hand sequences that approach, grasp, and move an object to a desired location, while retaining human-likeness. We show that our approach leads to stable grasps and generates a wide range of motions. Furthermore, even imperfect labels can be corrected by our method to generate dynamic interaction sequences.
+            We present ArtiGrasp, a novel method to synthesize bi-manual hand-object interactions that include grasping and articulation. This task is challenging due to the diversity of the global wrist motions and the precise finger control that are necessary to articulate objects. ArtiGrasp leverages reinforcement learning and physics simulations to train a policy that controls the global and local hand pose. Our framework unifies grasping and articulation within a single policy guided by a single hand pose reference. Moreover, to facilitate the training of the precise finger control required for articulation, we present a learning curriculum with increasing difficulty. It starts with single-hand manipulation of stationary objects and continues with multi-agent training including both hands and non-stationary objects. To evaluate our method, we introduce Dynamic Object Grasping and Articulation, a task that involves bringing an object into a target articulated pose. This task requires grasping, relocation, and articulation. We show our method's efficacy towards this task. We further demonstrate that our method can generate motions with noisy hand-object pose estimates from an off-the-shelf image-based regressor.
           </p>
         </div>
       </div>
@@ -188,7 +190,7 @@
   </div>
 </section>
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <h2 class="title is-3 has-text-centered">D-Grasp Results</h2>
   <div class="hero-body">
     <div class="container">
@@ -241,9 +243,9 @@
         (Best viewed in Google Chrome)
     </h2>
   </div>
-</section>
+</section> -->
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{christen2022dgrasp,
@@ -253,7 +255,7 @@
       year={2022}
     }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <!--<footer class="footer">-->
